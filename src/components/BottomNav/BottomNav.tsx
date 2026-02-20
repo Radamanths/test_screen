@@ -40,16 +40,10 @@ export function BottomNav({ tabs, onTabChange }: BottomNavProps) {
     <nav
       className="z-50"
       style={{
-        position: 'fixed',
-        bottom: 0,
-        left: '50%',
-        transform: 'translateX(-50%)',
         background: '#000000',
         width: '390px',
-        maxWidth: '100vw',
         height: '80px',
         padding: '18px 67px',
-        paddingBottom: 'max(18px, env(safe-area-inset-bottom))',
       }}
     >
       <div className="flex items-center justify-center gap-[72px] h-full">

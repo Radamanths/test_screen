@@ -104,7 +104,7 @@ export function CrystalsPage() {
 
       <motion.div
         className="flex flex-col"
-        style={{ gap: '12px', marginTop: '39px', paddingBottom: '92px', flex: '1 1 0', minHeight: 0, overflowY: 'auto', overflowX: 'hidden', WebkitOverflowScrolling: 'touch' }}
+        style={{ gap: '12px', marginTop: '39px', paddingBottom: '12px', flex: '1 1 0', minHeight: 0, overflowY: 'auto', overflowX: 'hidden', WebkitOverflowScrolling: 'touch' }}
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -188,9 +188,10 @@ export function CrystalsPage() {
         <motion.div variants={itemVariants}>
           <TasksCard />
         </motion.div>
+        <motion.div variants={itemVariants}>
+          <BottomNav tabs={mockNavTabs} />
+        </motion.div>
       </motion.div>
-
-      <BottomNav tabs={mockNavTabs} />
 
       </div>{/* end content wrapper */}
     </div>

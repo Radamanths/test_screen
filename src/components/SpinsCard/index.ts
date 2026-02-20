@@ -1,0 +1,1 @@
+export { SpinsCard } from './SpinsCard';

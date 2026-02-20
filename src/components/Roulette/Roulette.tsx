@@ -14,7 +14,7 @@ const ITEM_SIZE = 94;
 const ITEM_GAP = 6;
 
 export function Roulette({ prizes, spins, onSpin, disabled = false }: RouletteProps) {
-  const { isSpinning, currentOffset, winningPrize, spin, resetWin } = useRoulette({
+  const { isSpinning, currentOffset, spin, resetWin } = useRoulette({
     prizes,
     onSpinComplete: onSpin,
   });

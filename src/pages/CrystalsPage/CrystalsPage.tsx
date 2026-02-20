@@ -103,8 +103,8 @@ export function CrystalsPage() {
       <UserProfile user={user} />
 
       <motion.div
-        className="flex flex-col flex-1"
-        style={{ gap: '12px', marginTop: '39px', paddingBottom: '0px' }}
+        className="flex flex-col"
+        style={{ gap: '12px', marginTop: '39px', paddingBottom: '0px', flex: '1 1 0', minHeight: 0, overflow: 'hidden' }}
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -191,6 +191,7 @@ export function CrystalsPage() {
       </motion.div>
 
       <BottomNav tabs={mockNavTabs} />
+
 
       </div>{/* end content wrapper */}
     </div>

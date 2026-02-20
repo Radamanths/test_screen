@@ -43,6 +43,9 @@ export function Roulette({ prizes, spins, onSpin, disabled = false }: RoulettePr
 
   // Calculate center offset so the strip starts centered
   const centerOffset = (containerWidth - ITEM_SIZE) / 2;
+  // How many items needed to fill left side of center
+  const itemsBeforeCenter = Math.ceil(centerOffset / step);
+  const stripLeft = centerOffset - itemsBeforeCenter * step;
 
   const handleSpin = () => {
     resetWin();
@@ -50,7 +53,7 @@ export function Roulette({ prizes, spins, onSpin, disabled = false }: RoulettePr
   };
 
   // Calculate which item index is in center to apply opacity
-  const centerItemIndex = Math.round(currentOffset / step);
+  const centerItemIndex = Math.round(currentOffset / step) + itemsBeforeCenter;
 
   return (
     <div className="flex flex-col items-center gap-[8px]">
@@ -97,7 +100,7 @@ export function Roulette({ prizes, spins, onSpin, disabled = false }: RoulettePr
           className="absolute flex items-center will-change-transform"
           style={{
             top: '14px',
-            left: `${centerOffset}px`,
+            left: `${stripLeft}px`,
             gap: `${ITEM_GAP}px`,
             transform: `translateX(${-currentOffset}px)`,
           }}

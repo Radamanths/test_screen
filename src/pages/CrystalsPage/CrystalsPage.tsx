@@ -80,7 +80,7 @@ export function CrystalsPage() {
   return (
     <div
       className="relative flex flex-col bg-black overflow-hidden mx-auto"
-      style={{ width: '390px', height: '844px' }}
+      style={{ width: '390px', maxWidth: '100vw', height: '100dvh' }}
     >
       {/* Decorative background stars (Group 5) — z-0 so they stay behind all content */}
       <div className="absolute inset-0 pointer-events-none" style={{ opacity: 0.5, zIndex: 0 }}>
@@ -104,7 +104,7 @@ export function CrystalsPage() {
 
       <motion.div
         className="flex flex-col"
-        style={{ gap: '12px', marginTop: '39px', paddingBottom: '12px', flex: '1 1 0', minHeight: 0, overflowY: 'auto', overflowX: 'hidden' }}
+        style={{ gap: '12px', marginTop: '39px', paddingBottom: '12px', flex: '1 1 0', minHeight: 0, overflowY: 'auto', overflowX: 'hidden', WebkitOverflowScrolling: 'touch' }}
         variants={containerVariants}
         initial="hidden"
         animate="visible"
